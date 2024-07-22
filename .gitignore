@@ -1,0 +1,26 @@
+# Байткод Python
+*.pyc
+*.pyo
+__pycache__/
+
+# Файлы виртуальной среды
+venv/
+env/
+virtualenv/
+Pipfile
+Pipfile.lock
+
+# Сгенерированные файлы
+*.egg-info
+*.dist-info
+*.egg
+dist/
+build/
+docs/
+*.out
+
+# Файлы конфигурации
+*.env
+local_settings.py
+config.py
+settings.py

@@ -26,7 +26,7 @@ class JSONconnector(FileConnector, ABC):
 
     def add_vacancy(self, vacancy: Vacancy) -> None:
         vacancies = self.get_vacancies()
-        if vacancy not in vacancy:
+        if vacancy not in vacancies:
             vacancies.append(vacancy)
         self._save(*vacancies)
 
@@ -42,7 +42,7 @@ class JSONconnector(FileConnector, ABC):
             json.dump(data, file, ensure_ascii=False, indent=2)
 
     @staticmethod
-    def _parse_vacancy_to_dict(self, vacancy: Vacancy) -> dict:
+    def _parse_vacancy_to_dict(vacancy: Vacancy) -> dict:
         return {
             'name': vacancy.name,
             'url': vacancy.url,

@@ -47,10 +47,7 @@ def main():
             for vac in sorted(vacancies, key=lambda x: x.salary, reverse=True)[:5]:
                 print(vac)
 
-        elif user_answer == 3:
-            ...
-
-        if user_answer == 0:
+        if user_answer == 3:
             break
 
 

@@ -5,10 +5,9 @@ from src.dto import Vacancy, Salary
 
 
 def parse_data(data: dict) -> Vacancy:
-    url = data.get('alternative_url') or data.get('url')
     return Vacancy(
         name=data['name'],
-        url=url,
+        url=data['alternate_url'],
         employer=data['employer']['name'],
         salary=Salary(
             salary_from=data['salary']['from'],

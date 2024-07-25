@@ -61,8 +61,8 @@ class JSONconnector(FileConnector, ABC):
             url=data['url'],
             employer=data['employer'],
             salary=Salary(
-                salary_from=data['salary']['from'],
-                salary_to=data['salary']['to'],
+                salary_from=data['salary']['salary_from'],
+                salary_to=data['salary']['salary_to'],
                 currency=data['salary']['currency'],
             )
         )
